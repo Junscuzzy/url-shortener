@@ -9,12 +9,12 @@
     "test": "jest ./src --watch"
   },
   "dependencies": {
-    "body-parser": "^1.15.2",
+    "body-parser": "^1.19.0",
     "cors": "^2.8.1",
     "dotenv": "^8.2.0",
-    "express": "^5.0.0-alpha.2",
-    "mongodb": "^2.2.5",
-    "mongoose": "^4.5.7"
+    "express": "^4.17.1",
+    "mongodb": "^3.3.5",
+    "mongoose": "^5.7.12"
   },
   "repository": {
     "type": "git",
