@@ -1,8 +1,5 @@
 "use strict";
 
-// ? Read this tutorial and refactor :
-// https://dev.to/aurelkurtula/building-a-restful-api-with-express-and-mongodb--3mmh
-
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
