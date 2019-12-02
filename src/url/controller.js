@@ -6,7 +6,7 @@ const urlRegex = new RegExp(/((([A-Za-z]{3,9}:(?:\/\/)?)(?:[\-;:&=\+\$,\w]+@)?[A
 
 const checkIfNewExists = async (req, res, next) => {
   try {
-    const obj = await Url.findOne({ url: req.body }).exec();
+    const obj = await Url.findOne({ url: req.body.url }).exec();
     if (obj) req.urlExists = obj
   } catch (err) {
     if (err) console.log(err);
@@ -26,9 +26,9 @@ const postUrl = async (req, res) => {
 };
 
 const createUrl = async (req, res) => {
-  if (urlRegex.test(url)) {
+  if (urlRegex.test(req.body.url)) {
     try {
-      const obj = await Url.create({ url: req.body });
+      const obj = await Url.create({ url: req.body.url });
       res.json({ url: obj.url, short_url: obj._id });
     } catch (err) {
       if (err) console.log(err);
